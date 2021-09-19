@@ -1,16 +1,12 @@
-mov ah, 0x0e  ; scrolling teletype BIOS routine
+[ org 0x7c00 ]
 
-mov al, 'H'
-int 0x10
-mov al, 'E'
-int 0x10
-mov al, 'L'
-int 0x10
-mov al, 'L'
-int 0x10
-mov al, 'O'
-int 0x10
+%include "print_string_func.asm"
 
+MSG:
+db 'Initiating boot...', 0
+
+mov bx, MSG
+call print_string
 
 jmp $         ; infinite jump
 
