@@ -12,8 +12,7 @@ mov al, 'O'
 int 0x10
 
 
-loop:         ; infinite jump
-jmp loop
+jmp $         ; infinite jump
 
 times 510-($-$$) db 0
 
