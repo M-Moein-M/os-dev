@@ -1,9 +1,13 @@
 [ org 0x7c00 ]
 
-%include "print_string_func.asm"
-
 MSG:
 db 'Initiating boot...', 0
+
+%include "print_string_func.asm"
+
+
+mov bp, 0x8000
+mov sp, bp
 
 mov bx, MSG
 call print_string
