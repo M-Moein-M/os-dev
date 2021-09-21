@@ -1,4 +1,4 @@
-[ org 0x7c00 ]
+[ org 0x7800 ]
 
 MSG:
 db 'Initiating boot', 0
