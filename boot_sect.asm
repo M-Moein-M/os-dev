@@ -1,10 +1,12 @@
-[ org 0x7800 ]
+[ org 0x7c00 ]
 
-
-
+xor ax, ax
+mov ss, ax
 mov bp, 0x8000
 mov sp, bp
 
+xor ax, ax
+mov ds, ax
 mov bx, MSG
 call print_string
 
