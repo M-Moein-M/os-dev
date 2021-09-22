@@ -16,7 +16,7 @@ jmp $         ; infinite jump
 %include "print_hex_value_func.asm"
 
 MSG:
-db 'Initiating boot', 0
+db 'Initiating boot', 10, 13, 0
 
 HEX_NUMBERS:
 db '0123456789ABCDEF'
