@@ -13,9 +13,16 @@ call print_string
 jmp $         ; infinite jump
 
 %include "print_string_func.asm"
+%include "print_hex_value_func.asm"
 
 MSG:
 db 'Initiating boot', 0
+
+HEX_NUMBERS:
+db '0123456789ABCDEF'
+
+HEX_PREFIX:
+db '0x', 0
 
 times 510-($-$$) db 0
 
